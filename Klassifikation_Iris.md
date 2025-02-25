@@ -147,7 +147,8 @@ plt.show()
 
 ### **Vælg en anden model og træn (KNN)**
 Vi vil eksperimentére med en anden model, K-Nearest Neighbors (KNN).
-Nå vi træner en anden model skal vi kun ændre den linje kode, hvor vi vælger modellen
+Nå vi træner en anden model skal vi importere den nye model og ændre den linje kode, hvor vi vælger modellen.
+For at beholde den gamle kørsel kan den gamle kode kopieres i en ny notebook, hvor der arbejdes videre fra
 
 Kode:
 ```python
@@ -156,6 +157,8 @@ from sklearn.neighbors import KNeighborsClassifier
 
 model = KNeighborsClassifier(n_neighbors=3)
 ```
+**Opgave** 
+Indsæt linjen med import og ændre linjen med model og træn.
 
 ### **Evaluer (KNN) **
 Her skal bruges samme kode
@@ -182,9 +185,9 @@ Vi skal evaluere hvergang vi har valgt et andet antal naboer.
 ```python
 from sklearn.tree import DecisionTreeClassifier
 
-# Initialiser og træn modellen
-tree_model = DecisionTreeClassifier(max_depth=3, random_state=42)
-tree_model.fit(X_train, y_train)
+# Initialiser modellen
+model = DecisionTreeClassifier(max_depth=3, random_state=42)
+
 ```
 
 ---
