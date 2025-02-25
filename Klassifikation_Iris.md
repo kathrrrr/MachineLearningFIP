@@ -148,9 +148,20 @@ plt.show()
 ### **Vælg en anden model og træn (KNN)**
 Vi vil eksperimentére med en anden model, K-Nearest Neighbors (KNN).
 Nå vi træner en anden model skal vi importere den nye model og ændre den linje kode, hvor vi vælger modellen.
-For at beholde den gamle kørsel kan den gamle kode kopieres i en ny notebook, hvor der arbejdes videre fra
+For at beholde den gamle kørsel kan den gamle kode kopieres i et nyt kodefelt.
+Vi starter med at indsætte koden fra afsnittet vælg model og træn
 
-Kode:
+```python
+# Træn modellen
+model = LogisticRegression(max_iter=200)
+model.fit(X_train, y_train)
+
+# Forudsig med testdata
+y_pred = model.predict(X_test)
+print("Forudsigelser:", y_pred)
+```
+
+Nu skal vi tildele den nye model til variablen model og for at gøre det er vi nød til at importerer biblioteket.
 ```python
 from sklearn.neighbors import KNeighborsClassifier
 
