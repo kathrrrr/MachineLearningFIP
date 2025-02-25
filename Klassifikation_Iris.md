@@ -100,6 +100,7 @@ print("Forudsigelser:", y_pred)
 
 **Opgave**:
 - Hvad betyder "træning" af en model?
+- Hvilke data laver vi forudsigelser på?
   
 
 ---
@@ -115,8 +116,7 @@ from sklearn.metrics import accuracy_score, classification_report
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Modelens nøjagtighed: {accuracy:.2f}")
 
-# Klassifikationsrapport
-print("Klassifikationsrapport:")
+
 ```
 
 **Opgave**:
