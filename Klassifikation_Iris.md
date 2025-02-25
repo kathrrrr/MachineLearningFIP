@@ -105,8 +105,8 @@ print("Forudsigelser:", y_pred)
 
 ---
 
-### **Trin 5: Evaluering af modellen**
-**Formål**: Lær at måle modellens nøjagtighed og præstation.
+### **Evaluer**
+Vi vi måle modellens nøjagtighed.
 
 Kode:
 ```python
@@ -118,17 +118,15 @@ print(f"Modelens nøjagtighed: {accuracy:.2f}")
 
 # Klassifikationsrapport
 print("Klassifikationsrapport:")
-print(classification_report(y_test, y_pred, target_names=iris.target_names))
 ```
 
 **Opgave**:
 - Hvad fortæller nøjagtighed?
-- Hvad kan vi lære fra en klassifikationsrapport?
 
 ---
 
-### **Trin 6: Visualisering af resultater**
-**Formål**: Lav en simpel visualisering af modellens præstation.
+### **Evlauer (visualiser)**
+Vi vil lave en confusionsmatrix.
 
 Kode:
 ```python
@@ -148,35 +146,32 @@ plt.show()
 
 ---
 
-### **Trin 7: Prøv en anden model**
-**Formål**: Eksperimentér med en ny algoritme, K-Nearest Neighbors (KNN).
+### **Vælg en anden model**
+Vi vil eksperimentére med en anden model, K-Nearest Neighbors (KNN).
 
 Kode:
 ```python
 from sklearn.neighbors import KNeighborsClassifier
 
+### **Træn**
 # Træn KNN-modellen
 knn_model = KNeighborsClassifier(n_neighbors=3)
 knn_model.fit(X_train, y_train)
 
+### **Evaluer**
 # Forudsig og evaluer
 y_pred_knn = knn_model.predict(X_test)
 print(f"KNN-modelens nøjagtighed: {accuracy_score(y_test, y_pred_knn):.2f}")
 ```
 
+
+### **Tune**
 **Opgave**:
-- Hvordan fungerer KNN?
+
 - Hvordan kan vi vælge `n_neighbors`?
 - Lav en konfusionsmatrix for knn-modellen.
 
 ---
-
-### **Opsummering**
-1. Introduktion til Iris-datasættet.
-2. Visualisering af data.
-3. Træning og evaluering af supervised modeller.
-4. Eksperimenter med en anden model.
-
 
 Her er et simpelt eksempel på **supervised learning** og **klassifikation** ved hjælp af en **Decision Tree Classifier** (klassifikationstræ). Datasættet, vi bruger, er stadig **Iris-datasæt**.
 
