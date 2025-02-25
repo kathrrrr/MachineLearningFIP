@@ -234,7 +234,7 @@ plt.show()
 
 ---
 
-## **Mere tune**
+### **Tune mere**
 - Eksperimentér med andre parametre, fx:
   - `criterion="gini"` eller `criterion="entropy"`.
   - `min_samples_split` for at begrænse, hvor mange data punkter en node skal have før split.
