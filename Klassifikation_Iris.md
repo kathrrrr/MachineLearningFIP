@@ -172,7 +172,7 @@ Vi vil prøve med forskellig antal naboer,
 
 - Vælg et nyt tal for antal naboer (`n_neighbors`)
 
-### **Evaluer (KNN) **
+### **Evaluer (KNN)**
 Vi skal evaluere hvergang vi har valgt et andet antal naboer.
 
 
