@@ -104,7 +104,7 @@ print("Forudsigelser:", y_pred)
 
 ---
 
-### **Evaluer**
+### **Evaluer (Logistisk Regression)**
 Vi vi måle modellens nøjagtighed.
 
 Kode:
@@ -124,7 +124,7 @@ print("Klassifikationsrapport:")
 
 ---
 
-### **Evlauer (visualiser)**
+### **Evlauer: Visualiser (Logistisk Regression)**
 Vi vil lave en confusionsmatrix.
 
 Kode:
@@ -145,64 +145,35 @@ plt.show()
 
 ---
 
-### **Vælg en anden model**
+### **Vælg en anden model og træn (KNN)**
 Vi vil eksperimentére med en anden model, K-Nearest Neighbors (KNN).
+Nå vi træner en anden model skal vi kun ændre den linje kode, hvor vi vælger modellen
 
 Kode:
 ```python
 from sklearn.neighbors import KNeighborsClassifier
 
-### **Træn**
-# Træn KNN-modellen
-knn_model = KNeighborsClassifier(n_neighbors=3)
-knn_model.fit(X_train, y_train)
 
-### **Evaluer**
-# Forudsig og evaluer
-y_pred_knn = knn_model.predict(X_test)
-print(f"KNN-modelens nøjagtighed: {accuracy_score(y_test, y_pred_knn):.2f}")
-```
+model = KNeighborsClassifier(n_neighbors=3)
 
 
-### **Tune**
+### **Evaluer (KNN) **
+Her skal bruges samme kode
+
+
+### **Tune (KNN)**
+Vi vil prøve med forskellig antal naboer,
 **Opgave**:
 
 - Hvordan kan vi vælge `n_neighbors`?
-- Lav en konfusionsmatrix for knn-modellen.
+
+### **Evaluer (KNN) **
+Vi evaluere hvergang vi har valgt et andet antal naboer.
+
 
 ---
 
-Her er et simpelt eksempel på **supervised learning** og **klassifikation** ved hjælp af en **Decision Tree Classifier** (klassifikationstræ). Datasættet, vi bruger, er stadig **Iris-datasæt**.
 
----
-
-## **Undervisningsforløb: Klassifikation med Klassifikationstræer**
-### **Mål**
-1. Introducere begrebet klassifikationstræer.
-2. Forstå, hvordan beslutningstræer bruges i supervised learning.
-3. Træne, evaluere og visualisere et beslutningstræ ved hjælp af Iris-datasættet.
-
----
-
-### **Baggrundsviden: Hvad er et klassifikationstræ?**
-- Et **klassifikationstræ** opdeler data i undergrupper baseret på betingelser.
-- Træet består af **noder**:
-  - **Rodnode**: Startpunktet, hvor data opdeles første gang.
-  - **Indre noder**: Repræsenterer yderligere opdelinger.
-  - **Blade**: Slutnoderne, som indeholder en klassifikation (fx Setosa, Versicolor, Virginica).
-
-Træet opbygger opdelinger ved at vælge funktioner (features) og værdier, der bedst adskiller klasserne.
-
----
-
-### **Trin 1: Forstå Iris-datasættet**
-**Formål**: Lær, hvad datasættet indeholder.
-
-Iris-datasættet har:
-- 4 funktioner (features): `sepal length`, `sepal width`, `petal length`, `petal width`.
-- 3 klasser: `Setosa`, `Versicolor`, `Virginica`.
-
----
 
 ### **Trin 2: Visualisering af data**
 Visualisering gør det lettere at forstå, hvordan funktionerne skelner mellem klasser.
