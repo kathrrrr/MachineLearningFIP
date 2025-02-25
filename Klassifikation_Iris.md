@@ -9,9 +9,9 @@ I https://colab.research.google.com/ vælges fil ->Ny  notebook i Drev
 
 
 ### **Opdag**
-Vi vil undersøge hvad datasættet indeholder.
+Vi vil undersøge hvad datasættet indeholder. Indsæt kode i et kodefelt i Colab.
 
-Kode:
+Kode 1:
 ```python
 from sklearn.datasets import load_iris
 import pandas as pd
@@ -36,9 +36,9 @@ print(iris_df.head())
 ---
 
 ### **Opdag: Visualiser**
-Vi vil undersøge data ved hjælp af plots.
+Vi vil undersøge data ved hjælp af plots. Indsæt koden i et nyt kodefelt
 
-Kode:
+Kode 2:
 ```python
 import matplotlib.pyplot as plt
 
@@ -50,16 +50,16 @@ plt.title('Scatterplot of Iris Data')
 plt.show()
 ```
 
-**Opgave**:
+
 - Brug forskellige par af egenskaber for at undersøge data.
 - Hvordan ser de tre klasser ud i plottet?
 
 ---
 
 ### **Split**
-Vi vil opdele data i trænings- og testdata
+Vi vil opdele data i trænings- og testdata. Indsæt koden i et nyt kodefelt.
 
-Kode:
+Kode 3:
 ```python
 from sklearn.model_selection import train_test_split
 
@@ -76,15 +76,15 @@ print(f"Antal testdata: {len(X_test)}")
 
 ```
 
-**Opgave**:
+
 - Hvorfor deler vi data?
 - Hvad betyder `test_size`?
 
 ---
 ### **Vælg en model og træn (Logistisk Regression)**
-Vi vil træne data i en simpel klassifikationsmodel (Logistisk Regression).
+Vi vil træne data i en simpel klassifikationsmodel (Logistisk Regression). Indsæt koden i et nyt kodefelt.
 
-Kode:
+Kode 4:
 ```python
 from sklearn.linear_model import LogisticRegression
 
@@ -98,7 +98,7 @@ y_pred = model.predict(X_test)
 print("Forudsigelser:", y_pred)
 ```
 
-**Opgave**:
+
 - Hvad betyder "træning" af en model?
 - Hvilke data laver vi forudsigelser på?
   
@@ -106,9 +106,9 @@ print("Forudsigelser:", y_pred)
 ---
 
 ### **Evaluer (Logistisk Regression)**
-Vi vi måle modellens nøjagtighed.
+Vi vi måle modellens nøjagtighed. Indsæt koden i et nyt kodefelt.
 
-Kode:
+Kode 5:
 ```python
 from sklearn.metrics import accuracy_score, classification_report
 
@@ -119,15 +119,15 @@ print(f"Modelens nøjagtighed: {accuracy:.2f}")
 
 ```
 
-**Opgave**:
+
 - Hvad fortæller nøjagtighed?
 
 ---
 
 ### **Evlauer: Visualiser (Logistisk Regression)**
-Vi vil lave en confusionsmatrix.
+Vi vil lave en confusionsmatrix. Indsæt koden i et ny kodefelt.
 
-Kode:
+Kode 6:
 ```python
 import numpy as np
 
@@ -139,7 +139,6 @@ plt.title("Confusion Matrix")
 plt.show()
 ```
 
-**Opgave**:
 - Hvad viser en confusion matrix?
 - Hvor ser modellen ud til at fejle?
 
@@ -149,7 +148,7 @@ plt.show()
 Vi vil eksperimentére med en anden model, K-Nearest Neighbors (KNN).
 Nå vi træner en anden model skal vi importere den nye model og ændre den linje kode, hvor vi vælger modellen.
 For at beholde den gamle kørsel kan den gamle kode kopieres i et nyt kodefelt.
-Vi starter med at indsætte koden fra afsnittet vælg model og træn
+Vi starter med at indsætte kode 4 fra afsnittet **Vælg model og træn**
 
 ```python
 # Træn modellen
@@ -161,25 +160,26 @@ y_pred = model.predict(X_test)
 print("Forudsigelser:", y_pred)
 ```
 
-Nu skal vi tildele den nye model til variablen model og for at gøre det er vi nød til at importerer biblioteket.
+Nu skal vi tildele den nye model til variablen model og for at gøre det, er vi nød til at importerer det rigtige bibliotek.
 ```python
 from sklearn.neighbors import KNeighborsClassifier
 
 
 model = KNeighborsClassifier(n_neighbors=3)
 ```
-**Opgave** 
-Indsæt linjen med import og ændre linjen med model og træn.
+
+Indsæt linjen med import og ændr linjen med model og træn.
 
 ### **Evaluer (KNN)**
-**Opgave** 
+Her kan vi bruge koden uden ændringer fra afsnittet Evaluer. Indsæt koden fra kode 5.
+
 Evaluer modellen og lav confusion matrix med samme kode som før
 
 
 ### **Tune (KNN)**
 Vi vil prøve med forskellig antal naboer,
 
-**Opgave**:
+
 
 - Vælg et nyt tal for antal naboer (`n_neighbors`)
 
@@ -194,6 +194,8 @@ Vi skal evaluere hvergang vi har valgt et andet antal naboer.
 ---
 
 ### **3. Vælg ny model og træn (Klassifikationstræ)**
+Vi kan endnu engang genbruge koden fra kode 4. Derefter skal vi importere det rigtige bibliotek og ændre variablen model.
+
 ```python
 from sklearn.tree import DecisionTreeClassifier
 
@@ -225,10 +227,10 @@ plt.show()
 ---
 
 ### **5. Tune og evaluer**
-## **Opgaver**
-1. Prøv med forskellige `max_depth` ?
-2. Overvej hvordan  hvilke egenskaber der opdeles efter først?
-3. Er modellen overfittet eller underfittet? Hvordan kan du ændre dette?
+
+- Prøv med forskellige `max_depth` ?
+- Overvej hvordan  hvilke egenskaber der opdeles efter først?
+- Er modellen overfittet eller underfittet? Hvordan kan du ændre dette?
 
 ---
 
