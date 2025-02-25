@@ -193,7 +193,7 @@ Vi skal evaluere hvergang vi har valgt et andet antal naboer.
 
 ---
 
-### **3. Vælg ny model og træn (Klassifikationstræ)**
+### **Vælg ny model og træn (Klassifikationstræ)**
 Vi kan endnu engang genbruge koden fra kode 4. Derefter skal vi importere det rigtige bibliotek og ændre variablen model.
 
 ```python
@@ -206,12 +206,12 @@ model = DecisionTreeClassifier(max_depth=3, random_state=42)
 
 ---
 
-### **4. Evaluer (Klassifikationstræ)**
+### **Evaluer (Klassifikationstræ)**
 Evaluer modellen og lav confusion matrix med samme kode som før
 
 ---
 
-### **5. Visualiser klassifikationstræet**
+### **Visualiser klassifikationstræet**
 Vi kan visualisere klassifikationstræet
 ```python
 from sklearn.tree import plot_tree
@@ -226,7 +226,7 @@ plt.show()
 
 ---
 
-### **5. Tune og evaluer**
+### **Tune og evaluer**
 
 - Prøv med forskellige `max_depth` ?
 - Overvej hvordan  hvilke egenskaber der opdeles efter først?
