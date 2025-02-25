@@ -160,8 +160,9 @@ model = KNeighborsClassifier(n_neighbors=3)
 **Opgave** 
 Indsæt linjen med import og ændre linjen med model og træn.
 
-### **Evaluer (KNN) **
-Her skal bruges samme kode
+### **Evaluer (KNN)**
+**Opgave** 
+Evaluer modellen og lav confusion matrix med samme kode som før
 
 
 ### **Tune (KNN)**
@@ -193,11 +194,12 @@ model = DecisionTreeClassifier(max_depth=3, random_state=42)
 ---
 
 ### **4. Evaluer (Klassifikationstræ)**
-Her bruges samme kode.
+Evaluer modellen og lav confusion matrix med samme kode som før
 
 ---
 
 ### **5. Visualiser klassifikationstræet**
+Vi kan visualisere klassifikationstræet
 ```python
 from sklearn.tree import plot_tree
 import matplotlib.pyplot as plt
