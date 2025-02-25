@@ -81,8 +81,7 @@ print(f"Antal testdata: {len(X_test)}")
 - Hvad betyder `test_size`?
 
 ---
-
-### **Træn**
+### **Vælg en model og træn (Logistisk Regression)**
 Vi vil træne data i en simpel klassifikationsmodel (Logistisk Regression).
 
 Kode:
