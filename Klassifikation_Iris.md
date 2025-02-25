@@ -193,17 +193,7 @@ model = DecisionTreeClassifier(max_depth=3, random_state=42)
 ---
 
 ### **4. Evaluer (Klassifikationstræ)**
-```python
-from sklearn.metrics import accuracy_score, classification_report
-
-# Forudsig testdata
-y_pred = tree_model.predict(X_test)
-
-# Evaluer
-print(f"Nøjagtighed: {accuracy_score(y_test, y_pred):.2f}")
-print("Klassifikationsrapport:")
-print(classification_report(y_test, y_pred, target_names=iris.target_names))
-```
+Her bruges samme kode.
 
 ---
 
