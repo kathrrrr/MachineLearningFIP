@@ -226,7 +226,7 @@ plt.show()
 
 ---
 
-### **Tune og evaluer**
+### **Tune og evaluer (Klassifikationstræ)**
 
 - Prøv med forskellige `max_depth` ?
 - Overvej hvordan  hvilke egenskaber der opdeles efter først?
@@ -234,7 +234,7 @@ plt.show()
 
 ---
 
-### **Tune mere**
+### **Tune mere (Klassifikationstræ)**
 - Eksperimentér med andre parametre, fx:
   - `criterion="gini"` eller `criterion="entropy"`.
   - `min_samples_split` for at begrænse, hvor mange data punkter en node skal have før split.
