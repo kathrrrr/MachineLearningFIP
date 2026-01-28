@@ -219,7 +219,7 @@ import matplotlib.pyplot as plt
 
 # Visualiser træet
 plt.figure(figsize=(12, 8))
-plot_tree(tree_model, feature_names=iris.feature_names, class_names=iris.target_names, filled=True)
+plot_tree(model, feature_names=iris.feature_names, class_names=iris.target_names, filled=True)
 plt.title("Klassifikationstræ")
 plt.show()
 ```
